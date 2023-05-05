@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+  />
+  <link
+    href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tambah Kelas</title>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="animate__animated animate__fadeInDown">
+        <!-- <div class="layar-dalam"> -->
+        <div class="logo">
+          <a href=""><img src="image/logo.png" class="putih" /></a>
+        </div>
+  
+        <!--    <div class="menu"> -->
+        <ul class="menu">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="dashboard.html#kelas">List Kelas</a></li>
+          <li><a href="dashboard.html#murid">List Murid</a></li>
+          <li><a href="dashboard.html#guru">List Guru</a></li>
+        </ul>
+        <div class="main">
+          <input type="checkbox" id="switch-mode" hidden />
+          <label for="switch-mode" class="switch-mode"></label>
+          <a href="#" class="profile">
+            <img src="image/people.jpg" />
+          </a>
+          <a href="login.html">
+            <button class="btn btn-sm btn-danger" id="btnLogout">
+              Logout
+            </button>
+            </a>
+          <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+      </nav>
+   
+      <div class="container" id="containerTmbh">
+        <div class="container" id="containerForm">
+          <h2>EDIT GURU</h2>
+  
+          <form action="" method="post" onsubmit="return validateFormUser()">
+            <div class="mb-3">
+              <label class="form-label">Nama Guru</label>
+              <input type="text"  id="name" class="form-control" value="Asep" >
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Gmail Guru</label>
+              <input type="text" id="email" class="form-control" value="pakasep@gmail.com" >
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input type="text" id="username" class="form-control" value="asep" >
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="text" id="password" class="form-control" value="asep123" >
+            </div>
+          </form>
+          <button type="submit" class="btn btn-sm btn-primary" id="addButton" onclick="showConfirmation()">EDIT</button>
+        </div>
+        <div class="table-responsive-sm" id="tabel">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr class="titleTbl">
+                <th>No</th>
+                <th>Kode</th>
+                <th>Nama Guru</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>gmail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="data">
+                <td><p>1</p></td>
+                <td><p>ase01</p></td>
+                <td><p>Asep</p></td>
+                <td><p>asep</p></td>
+                <td><p>asep123</p></td>
+                <td><p>pakasep@gmail.com</p></td>
+              </tr>
+              <tr class="data">
+                <td><p>2</p></td>
+                <td><p>sit02</p></td>
+                <td><p>Sitinur</p></td>
+                <td><p>siti</p></td>
+                <td><p>siti123</p></td>
+                <td><p>sitinur2131@gmail.com</p></td>
+              </tr>
+              <tr class="data">
+                <td><p>3</p></td>
+                <td><p>bud03</p></td>
+                <td><p>Budi Doremi</p></td>
+                <td><p>budi</p></td>
+                <td><p>budi123</p></td>
+                <td><p>budi@gmail.com</p></td>
+              </tr>
+              <tr class="data">
+                <td><p>4</p></td>
+                <td><p>sar04</p></td>
+                <td><p>Sarmilih</p></td>
+                <td><p>sarmilih</p></td>
+                <td><p>sarmilih123</p></td>
+                <td><p>sarmilihmilih@gmail.com</p></td>
+              </tr>
+              <tr class="data">
+                <td><p>5</p></td>
+                <td><p>tat05</p></td>
+                <td><p>Tatang</p></td>
+                <td><p>tatang</p></td>
+                <td><p>tatang123</p></td>
+                <td><p>tatatang@gmail.com</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+          <h3>Apakah anda yakin mengubah data ini?</h3>     
+          <button onclick="editUser()" style="background-color: #3c91e6;">Yes, edit</button>
+          <button onclick="hideConfirmation()" style="background-color: #db504a">Cancel</button>
+        </div>
+      </div>
+      <script src="js/add.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/form.js"></script>
+      <div class="copyright">
+        <p>© 2023 SARA-Class. Smart People.</p>
+      </div>
+  </body>
+</html>

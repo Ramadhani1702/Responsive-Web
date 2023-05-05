@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fd7238;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  max-width: 100vh;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.login {
+  width: 70%;
+}
+
+form {
+  width: 60%;
+  margin: 60px auto;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+hr {
+  border-top: 2px solid #ffa12c;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+}
+
+.right img {
+  width: 35vh;
+  height: 40vh;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-top: 40%;
+  margin-right: 40px;
+  margin-top: 10%;
+}
+
+form label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.input_wrap {
+  font-size: 8px;
+  margin-top: 10%;
+  text-align: center;
+  color: red;
+  display: none;
+}
+
+input {
+  width: 100%;
+  margin: 2px;
+  border: none;
+  outline: none;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #ffa12c;
+}
+
+button:hover {
+  background: rgba(214, 86, 64, 1);
+}
+
+@media (max-width: 880px) {
+  .container {
+    width: 100%;
+    max-width: 750px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  form {
+    width: 300px;
+    margin: 20px auto;
+  }
+
+  .login {
+    width: 400px;
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .right img {
+    width: 80%;
+    height: 80%;
+    padding-bottom: 10%;
+  }
+}
+
+/* ----  Responsiveness   ----  */
+@media (max-width: 453px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right img {
+    display: none;
+  }
+}
+
+@media (max-width: 603px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right {
+    display: none;
+  }
+}

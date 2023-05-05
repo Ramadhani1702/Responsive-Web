@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/loginstyle.css" />
+    <title>LOGIN PAGE</title>
+  </head>
+
+  <body>
+    <div class="container animate__animated animate__backInDown">
+      <div class="login">
+        <form
+          method="post"
+          id="submit"
+          name="form"
+          onsubmit="return validateForm()"
+          action="dashboard.html"
+        >
+          <h1>Login</h1>
+          <hr />
+          <div>
+            <label for=""
+              ><i class="fa-sharp fa-solid fa-user fa-beat"></i> Username
+            </label>
+            <input
+              type="text"
+              class="input"
+              id="input_username"
+              name="input_username"
+            />
+
+            <br />
+            <span id="usernameError" class="error"></span>
+          </div>
+          <div>
+            <label for=""
+              ><i class="fa-solid fa-user-secret fa-beat"></i>Password</label
+            >
+            <input
+              type="password"
+              class="input"
+              id="input_password"
+              name="input_password"
+            />
+
+            <br />
+            <span id="passwordError" class="error"></span>
+
+            <div class="input_wrap" id="error_msg">
+              <span class="error_msg">username atau password anda salah</span>
+            </div>
+
+            <button>Login</button>
+          </div>
+        </form>
+      </div>
+      <div class="right">
+        <img src="./image/logo.png" alt="" />
+      </div>
+    </div>
+    <script type="text/javascript" src="js/login.js"></script>
+  </body>
+</html>

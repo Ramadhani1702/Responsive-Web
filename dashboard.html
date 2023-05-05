@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="animate__animated animate__fadeInDown">
+      <!-- <div class="layar-dalam"> -->
+      <div class="logo">
+        <a href=""><img src="image/logo.png" class="putih" /></a>
+      </div>
+
+      <!--    <div class="menu"> -->
+      <ul class="menu">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#kelas">List Kelas</a></li>
+        <li><a href="#murid">List Murid</a></li>
+        <li><a href="#guru">List Guru</a></li>
+      </ul>
+      <div class="main">
+        <input type="checkbox" id="switch-mode" hidden />
+        <label for="switch-mode" class="switch-mode"></label>
+        <a href="#" class="profile">
+          <img src="image/people.jpg" />
+        </a>
+        <a href="login.html">
+          <button class="btn btn-sm btn-danger" id="btnLogout">Logout</button>
+        </a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container">
+        <h1 class="mt-5">WELCOME ADMIN</h1>
+
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3>Total Kelas: 20</h3>
+              <a href="tambah_kelas.html" class="btn btn-sm btn-info"
+                >Tambah Kelas</a
+              >
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-group"></i>
+            <span class="text">
+              <h3>Total Murid: 532</h3>
+              <a href="tambah_murid.html" class="btn btn-sm btn-info"
+                >Tambah Murid</a
+              >
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-group"></i>
+            <span class="text">
+              <h3>Total Guru: 32</h3>
+              <a href="tambah_guru.html" class="btn btn-sm btn-info"
+                >Tambah Guru</a
+              >
+            </span>
+          </li>
+        </ul>
+
+        <div class="row pt-5" id="kelas">
+          <hr />
+          <h1 class="mt-5">LIST KELAS</h1>
+          <div class="col-6">
+            <div class="mb-3">
+              <label class="form-label">Search</label>
+              <div class="input-group">
+                <input type="text" class="form-control" name="search" />
+                <span class="input-group-append">
+                  <button class="input-group-text bg-light d-block">
+                    <i class="bx bxs-search"></i>
+                  </button>
+                </span>
+              </div>
+              <br />
+            </div>
+          </div>
+          <div class="col-12">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr class="titleTbl">
+                  <th>No</th>
+                  <th>Kelas</th>
+                  <th>Jumlah Murid</th>
+                  <th>Nama Guru</th>
+                  <th>Kode Kelas</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="data">
+                  <td><p>1</p></td>
+                  <td><p>Matematika 1</p></td>
+                  <td><p>10</p></td>
+                  <td><p>Asep</p></td>
+                  <td><p>mtk1</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_kelas.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="data">
+                  <td><p>2</p></td>
+                  <td><p>IPA 1</p></td>
+                  <td><p>10</p></td>
+                  <td><p>Asep</p></td>
+                  <td><p>ipa1</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_kelas.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="data">
+                  <td><p>3</p></td>
+                  <td><p>Olahraga 1</p></td>
+                  <td><p>10</p></td>
+                  <td><p>Asep</p></td>
+                  <td><p>or1</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_kelas.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="data">
+                  <td><p>4</p></td>
+                  <td><p>PKN 1</p></td>
+                  <td><p>10</p></td>
+                  <td><p>Asep</p></td>
+                  <td><p>pkn1</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_kelas.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row pt-5" id="murid">
+          <hr />
+          <h1 class="mt-5">LIST MURID</h1>
+          <div class="col-6">
+            <div class="mb-3">
+              <label class="form-label">Search</label>
+              <div class="input-group">
+                <input type="text" class="form-control" name="search" />
+                <span class="input-group-append">
+                  <button class="input-group-text bg-light d-block">
+                    <i class="bx bxs-search"></i>
+                  </button>
+                </span>
+              </div>
+              <br />
+            </div>
+          </div>
+          <div class="col-12">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr class="titleTbl">
+                  <th>No</th>
+                  <th>Kode</th>
+                  <th>Nama Murid</th>
+                  <th>Username</th>
+                  <th>Password</th>
+                  <th>Gmail</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="data">
+                  <td><p>1</p></td>
+                  <td><p>bry1</p></td>
+                  <td><p>Bryan</p></td>
+                  <td><p>bryan</p></td>
+                  <td><p>bryan123</p></td>
+                  <td><p>bryanskuy@gmail.com</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_murid.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="data">
+                  <td><p>2</p></td>
+                  <td><p>ram2</p></td>
+                  <td><p>Ramadhani</p></td>
+                  <td><p>rama</p></td>
+                  <td><p>rama123</p></td>
+                  <td><p>ramaparviz@gmail.com</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_murid.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="data">
+                  <td><p>3</p></td>
+                  <td><p>sah3</p></td>
+                  <td><p>Sahatraf</p></td>
+                  <td><p>sahat</p></td>
+                  <td><p>sahat123</p></td>
+                  <td><p>sahsahat@gmail.com</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_murid.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row pt-5" id="guru">
+          <hr />
+          <h1 class="mt-5">LIST GURU</h1>
+          <div class="col-6">
+            <div class="mb-3">
+              <label class="form-label">Search</label>
+              <div class="input-group">
+                <input type="text" class="form-control" name="search" />
+                <span class="input-group-append">
+                  <button class="input-group-text bg-light d-block">
+                    <i class="bx bxs-search"></i>
+                  </button>
+                </span>
+              </div>
+              <br />
+            </div>
+          </div>
+          <div class="col-12">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr class="titleTbl">
+                  <th>No</th>
+                  <th>Kode</th>
+                  <th>Nama Guru</th>
+                  <th>Username</th>
+                  <th>Password</th>
+                  <th>Gmail</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="data">
+                  <td><p>1</p></td>
+                  <td><p>ase01</p></td>
+                  <td><p>Asep</p></td>
+                  <td><p>asep</p></td>
+                  <td><p>asep123</p></td>
+                  <td><p>pakasep@gmail.com</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_guru.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                      <div id="confirmationModal" class="modal">
+                        <div class="modal-content">
+                          <h3>Apakah anda yakin menghapus data ini?</h3>
+                          <p>Aksi ini tidak dapat diubah kembali.</p>
+                          <button
+                            onclick="deleteItem()"
+                            style="background-color: #3c91e6"
+                          >
+                            Yes, delete
+                          </button>
+                          <button
+                            onclick="hideConfirmation()"
+                            style="background-color: #db504a"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="data">
+                  <td><p>2</p></td>
+                  <td><p>sit02</p></td>
+                  <td><p>Sitinur</p></td>
+                  <td><p>siti</p></td>
+                  <td><p>siti123</p></td>
+                  <td><p>sitinur2131@gmail.com</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_guru.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                      <div id="confirmationModal" class="modal">
+                        <div class="modal-content">
+                          <h3>Apakah anda yakin menghapus data ini?</h3>
+                          <p>Aksi ini tidak dapat diubah kembali.</p>
+                          <button
+                            onclick="deleteItem()"
+                            style="background-color: #3c91e6"
+                          >
+                            Yes, delete
+                          </button>
+                          <button
+                            onclick="hideConfirmation()"
+                            style="background-color: #db504a"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="data">
+                  <td><p>3</p></td>
+                  <td><p>bud03</p></td>
+                  <td><p>Budi Doremi</p></td>
+                  <td><p>budi</p></td>
+                  <td><p>budi123</p></td>
+                  <td><p>budi@gmail.com</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_guru.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                      <div id="confirmationModal" class="modal">
+                        <div class="modal-content">
+                          <h3>Apakah anda yakin menghapus data ini?</h3>
+                          <p>Aksi ini tidak dapat diubah kembali.</p>
+                          <button
+                            onclick="deleteItem()"
+                            style="background-color: #3c91e6"
+                          >
+                            Yes, delete
+                          </button>
+                          <button
+                            onclick="hideConfirmation()"
+                            style="background-color: #db504a"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="data">
+                  <td><p>4</p></td>
+                  <td><p>sar04</p></td>
+                  <td><p>Sarmilih</p></td>
+                  <td><p>sarmilih</p></td>
+                  <td><p>sarmilih123</p></td>
+                  <td><p>sarmilihmilih@gmail.com</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_guru.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                      <div id="confirmationModal" class="modal">
+                        <div class="modal-content">
+                          <h3>Apakah anda yakin menghapus data ini?</h3>
+                          <p>Aksi ini tidak dapat diubah kembali.</p>
+                          <button
+                            onclick="deleteItem()"
+                            style="background-color: #3c91e6"
+                          >
+                            Yes, delete
+                          </button>
+                          <button
+                            onclick="hideConfirmation()"
+                            style="background-color: #db504a"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="data">
+                  <td><p>5</p></td>
+                  <td><p>tat05</p></td>
+                  <td><p>Tatang</p></td>
+                  <td><p>tatang</p></td>
+                  <td><p>tatang123</p></td>
+                  <td><p>tatatang@gmail.com</p></td>
+                  <td>
+                    <div class="d-grid gap-2 d-md-flex s">
+                      <a href="edit_guru.html">
+                        <button class="input-group-text bg-light d-block">
+                          <i class='bx bxs-edit' ></i>
+                        </button>
+                      </a>   
+
+                      <button id="deleteButton" onclick="showConfirmation()" class="input-group-text bg-light d-block">
+                        <i class='bx bx-trash'></i>
+                      </button>
+                      <div id="confirmationModal" class="modal">
+                        <div class="modal-content">
+                          <h3>Apakah anda yakin menghapus data ini?</h3>
+                          <p>Aksi ini tidak dapat diubah kembali.</p>
+                          <button
+                            onclick="deleteItem()"
+                            style="background-color: #3c91e6"
+                          >
+                            Yes, delete
+                          </button>
+                          <button
+                            onclick="hideConfirmation()"
+                            style="background-color: #db504a"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+    <script src="js/delete.js"></script>
+    <div class="copyright">
+      <p>© 2023 SARA-Class. Smart People.</p>
+    </div>
+  </body>
+</html>
